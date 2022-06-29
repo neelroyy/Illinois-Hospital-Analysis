@@ -1,8 +1,8 @@
 
-// d3.json("/api/v1.0/passengers").then(function(d){
+d3.json("/api/v1.0/staffed_beds").then(function(d){
     
-//     var count=[]
-//     var sexes=[];
+     var hospitalNames=[]
+     var staffedBeds =[];
 //     d.forEach(x => {
 //         if (sexes.includes(x.sex)){
 //             count[sexes.indexOf(x.sex)]+= 1;
@@ -13,15 +13,21 @@
 //         }
 //     })
     
-//     console.log(sexes);
-//     console.log(count);
+    console.log(hospitalNames);
+    console.log(staffedBeds);
 
-//     var data = [{
-//         x: sexes,
-//         y: count,
-//         type: 'bar'
+     var data = [{
+         x: hospitalNames,
+         y: staffedBeds,
+         type: 'bar'
 
-//     }];
+     }];
 
-//     Plotly.newPlot('plot', data);
-// });
+     let data = [trace1];
+
+     let layout = {
+         title: "Staffed Beds by Hospital"
+     };
+     
+     Plotly.newPlot("plot", data, layout);
+ 
