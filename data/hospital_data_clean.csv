@@ -1,6 +1,6 @@
 Hospital Name,City,StaffedBeds,TotalDischarges,PatientDays,Gross PatientRevenue ($000)
- Carle Richland Memorial Hospital,Olney,81,1218,3954,174055
- Northwestern Medicine Kishwaukee Hospital,DeKalb,98,5257,22918,1029869
+Carle Richland Memorial Hospital,Olney,81,1218,3954,174055
+Northwestern Medicine Kishwaukee Hospital,DeKalb,98,5257,22918,1029869
 AdventHealth Bolingbrook,Bolingbrook,134,5159,21501,663377
 AdventHealth GlenOaks,Glendale Heights,138,4636,23126,282596
 AdventHealth Hinsdale,Hinsdale,261,9104,43576,865900
@@ -61,7 +61,7 @@ Jackson Park Hospital,Chicago,183,2418,15161,204694
 Jacksonville Memorial Hospital,Jacksonville,121,2392,8932,403492
 Javon Bea Hospital - Rockton,Rockford,311,12383,65793,1462686
 Jersey Community Hospital,Jerseyville,46,725,2512,127109
-"John H. Stroger, Jr. Hospital of Cook County",Chicago,451,15808,81431,1575460
+John H. Stroger, Jr. Hospital of Cook County,Chicago,451,15808,81431,1575460
 Katherine Shaw Bethea Hospital,Dixon,80,2765,9334,460154
 Lake Behavioral Hospital ,Waukegan,146,0,0,40022
 Loretto Hospital,Chicago,122,4002,20033,100373
