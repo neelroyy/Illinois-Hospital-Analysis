@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 import json
 import numpy as np
-
+import pandas as pd
 #######################################################################
 ## Database Setup
 #######################################################################
@@ -30,7 +30,13 @@ app = Flask(__name__)
 @app.route("/")
 #define what to do when user hits the index route
 def welcome():
-    return render_template('index.html')
+    return render_template('index_HP2.html')
+
+
+# @app.route("/datatable")
+# #define what to do when user hits the index route
+# def datatable():
+#     return render_template('index_datatable1.html')
 
 
 @app.route("/api/v1.0/hospital_information")
@@ -42,12 +48,27 @@ def hospital_information():
      
 
 
-@app.route("/api/v1.0/hospital_locations")
-def hospital_locations():
-    with open("il_hospital_coord_rev.csv") as file:
-        file_reader = csv.reader(file)
-        for row in file_reader:
-            print(row)
+# @app.route("/api/v1.0/hospital_locations")
+# def hospital_locations():
+#     with open("il_hospital_coord_rev.csv") as file:
+#         file_reader = csv.reader(file)
+#         for row in file_reader:
+#             print(row)
+
+# -- hospital list 
+df = pd.read_csv("hospital_data_cleanv.csv")
+df.to_csv("hospital_data_cleanv.csv", index=None)
+  
+# route to html page - "table"
+@app.route('/datatable')
+def csvtohtml():
+    
+    # converting csv to html
+    data = pd.read_csv("hospital_data_cleanv.csv")
+    return render_template("index_datatable1.html", tables=[data.to_html(index=False)], titles=[''])
+  
+if __name__ == "__main__":
+    app.run(debug = True)
 
 
 # #@app.route("/api/v1.0/staffed_beds")

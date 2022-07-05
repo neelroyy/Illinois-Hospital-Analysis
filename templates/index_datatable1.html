@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: white
+            background: white;
         }
         
         /*Table rules*/
@@ -17,43 +17,57 @@
             border-collapse: collapse;
             margin: 25px 0;
             font-size: 0.9em;
-            min-width: 400px
+            min-width: 400px;
             text-align: right;
         }
 
-        table.thead {
-            background-color:#009879;
-            color:#fffffff
-            text-align: center;
-            font-weight: bold
+        thead tr{
+
+            color:#000;
+            text-align: center!important;
+            font-weight: bold;            
         }
-    
+        thead th{
+            background-color:#0099da!important;
+            color:#fff;
+            padding: 10px 25px;
+        }
+
+        td:first-child{
+            text-align:left;         
+
+        }
+
+        td:nth-child(2){
+            text-align:left;            
+        }
+
         tr:nth-child(odd){
             background: lightgrey;
         }
 
-        table.tbody tr {
-            border-bottom: 1px solid #dddddd;
+        tbody tr {
+            border-bottom: 1px solid #000;
         }
 
-        table.td {
-            padding: 4px 16px
+        td {
+            padding: 4px 16px;
         }
 
+        .table-title {
+            color:#0099da;
+        }
     </style>
     </head>
     <body>
         <div align="center">
-        <p align = "center"><h1>Illinois Hospital List</h1></p>
-            <table>
-                <h1 class = "table">
+        <p align = "center"><h1 class = "table-title">Illinois Hospital List</h1></p>
+                <!-- <h1 class = "table"> -->
                 <!--Displaying the converted table-->
-                     {%for table in tables%}
-                    <h2 style = "text-align:center">{{titles[loop.index]}}</h2>                            
-                    {{ table|safe }}
-                    {% endfor %}     
-                </h1> 
-            </table>
+                {%for table in tables%}
+                    {{ table|safe }}                           
+                {% endfor %}
+                <!-- </h1>  -->
         </div>
     </body>
 </html>
