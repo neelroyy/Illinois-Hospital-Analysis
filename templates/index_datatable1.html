@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewpoint" content="wideth=device-width,initial-scale=1.0">
+        <title> Hospital List </title>              
+    
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: white
+        }
+        
+        /*Table rules*/
+        table{
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 400px
+            text-align: right;
+        }
+
+        table.thead {
+            background-color:#009879;
+            color:#fffffff
+            text-align: center;
+            font-weight: bold
+        }
+    
+        tr:nth-child(odd){
+            background: lightgrey;
+        }
+
+        table.tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        table.td {
+            padding: 4px 16px
+        }
+
+    </style>
+    </head>
+    <body>
+        <div align="center">
+        <p align = "center"><h1>Illinois Hospital List</h1></p>
+            <table>
+                <h1 class = "table">
+                <!--Displaying the converted table-->
+                     {%for table in tables%}
+                    <h2 style = "text-align:center">{{titles[loop.index]}}</h2>                            
+                    {{ table|safe }}
+                    {% endfor %}     
+                </h1> 
+            </table>
+        </div>
+    </body>
+</html>
