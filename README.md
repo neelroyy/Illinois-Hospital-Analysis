@@ -1,5 +1,5 @@
 # Illinois-Hospital-Analysis
-Living in Illinois and trying to find the closest hospital to fit your medical needs. To figure this out, you look at the hospitals within your area and compare distance, reviews, and the number of staffed beds that each hospital has. 
+Living in Illinois and trying to find hospitals in your area and compare their ratings? Our project allows you to look at the hospitals in your area, their ratings, and the number of staffed beds that each hospital has.
 
 # Methods Used
 Web Scraping for data, dataset cleaning, database creating and data loading, API route creation, Webpage development, plotly and leaflet plot creation, MapBox location creation, creation of data for latitude and longitude
