@@ -13,4 +13,6 @@ Amelia Horton, Jenna Jorstad, Nina Padgett, Indranil Roy, Ying Sun
 # Data Source
 https://www.ahd.com/states/hospital_IL.html
 
-#Preview of Website
+# Preview of Website
+![hospital analysis](https://user-images.githubusercontent.com/99835613/177412647-d8f2cbe7-256a-4ba1-90cb-ca2d888cd312.png)
+
